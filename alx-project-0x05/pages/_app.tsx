@@ -1,15 +1,12 @@
+import '../styles/globals.css'; // Make sure this file exists in styles folder
 import type { AppProps } from 'next/app';
-import { CountProvider } from '../context/CountContext';
-import Layout from '../components/layout/Layout';
-import '../styles/globals.css';
+import Layout from '../components/layout/Layout'; // Adjust path if needed
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CountProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </CountProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 
