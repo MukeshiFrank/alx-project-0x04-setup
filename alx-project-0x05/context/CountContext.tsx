@@ -23,8 +23,10 @@ export const CountProvider = ({ children }: { children: ReactNode }) => {
 
 export const useCount = () => {
   const context = useContext(CountContext);
+
   if (!context) {
-    throw new Error("useCount must be within a CountProvider");
+    throw new Error("useCount must be used within a CountProvider");
   }
+
   return context;
 };
